@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>1. Modificacion del archivo <code>script.js</code></h2>
+    <p>Se ha añadido un evento <code>click</code> a las imagenes dentro del contenedor <code>image-container</code> para activar el modo pantalla completa</p>
+    <pre>
+    document.addEventListener("DOMContentLoaded", () => {
+        imageContainer.addEventListener("click", (event) => {
+            if (event.target.tagName === "IMG") {
+                const img = event.target;
+                if (img.requestFullscreen) {
+                    img.requestFullscreen();
+                } else if (img.mozRequestFullScreen) {
+                    img.mozRequestFullScreen();
+                } else if (img.webkitRequestFullscreen) {
+                    img.webkitRequestFullscreen();
+                } else if (img.msRequestFullscreen) {
+                    img.msRequestFullscreen();
+                }
+            }
+        });
+    });
+    </pre>
+    
+    <br>
+    <button onclick="window.location.href='index.html'">Volver</button>
+</body>
+
+</html>

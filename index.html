@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Descubre España</h1>
+    <form action="">
+        <label for="ccaa">Comunitat: </label>
+        <select name="ccaa" id="ccaa">
+            <option value="" disabled selected>Selecciona una opción</option>
+        </select>
+        <br><br>
+        
+        <label for="provincia">Província: </label>
+        <select name="provincia" id="provincia">
+            <option value="" disabled selected>Selecciona una opción</option> 
+        </select>
+        <br><br>
+        
+        <label for="poblacion">Població: </label>
+        <select name="poblacion" id="poblacion">
+            <option value="" disabled selected>Selecciona una opción</option>
+        </select>
+        <br><br>
+        
+        <input type="submit" value="ENVIAR" id="submit">
+    </form>
+    
+    <p id="fullscreen-tooltip">Dale a la imagen para verla en pantalla completa</p>
+    <div id="image-container"></div>
+    <br>
+
+    <button id="fullscreen-info" onclick="window.open('instruccion.html', '_blank')">Ver Instrucciones de la API Fullscreen</button>
+
+</body>
+<script src="script.js"></script>
+
+</html>
